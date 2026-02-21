@@ -1,0 +1,14 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY dedup_utils.py .
+COPY md5_dedup.py .
+COPY entry_1mil.csv .
+COPY epoch_md5.py .
+
+# Install necessary Python packages
+RUN pip install --no-cache-dir psutil
+
+# Run the script
+CMD ["python3", "epoch_md5.py"]
