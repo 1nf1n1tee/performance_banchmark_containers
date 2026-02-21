@@ -1,0 +1,10 @@
+##inside root user
+lxc-start --name container_name(example - lxccontainer)
+lxc-attach --name container_name(example - lxccontainer)
+
+##inside container
+run code and exit
+
+##inside root user
+lxc-stop --name container_name(example - lxccontainer)
+exit
